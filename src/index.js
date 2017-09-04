@@ -33,7 +33,9 @@ class ImageSlider extends Component {
   }
   slideImage(){
      const { images, index } = this.state;
+     
      var nextIndex = index 
+
      nextIndex++ //increment to next image 
 
      if(nextIndex === images.length){ //reset sliderImage when index reaches array length
@@ -47,8 +49,8 @@ class ImageSlider extends Component {
   render() { 
     const { images, sliderImage, opacity, index } = this.state
     return (
-      <div className="image-gallery-container">
-        <h1>Image Gallery</h1>
+      <div className="image-slider-container">
+        <h1>Image Slider</h1>
           <SliderImage
             opacityStyle = { opacity }
             sliderImage = {sliderImage }
@@ -70,7 +72,6 @@ class SliderImage extends Component {
           <div className="selected-image-block">
             <img alt={sliderImage.title} src={ process.env.PUBLIC_URL + sliderImage.source} />
           </div>
-          <p>{sliderImage.title}</p>
         </div>
         );
     }
@@ -80,7 +81,7 @@ class SliderThumbs extends Component {
     render() {
       const { images, sliderImageId } = this.props;
       return(
-           <div className="gallery-container">
+           <div className="slider-container">
            {
               images.map(image =>
                 <div className={(image.id === sliderImageId ? 'image-block image-block-selected' : 'image-block')} key={image.id}> 
@@ -93,6 +94,6 @@ class SliderThumbs extends Component {
     }
 }
 //image slider name for DOM element 
-ReactDOM.render(<ImageSlider />, document.getElementById('image-gallery'))
+ReactDOM.render(<ImageSlider />, document.getElementById('image-slider'))
 registerServiceWorker()
 
