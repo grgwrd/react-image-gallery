@@ -4,8 +4,8 @@ import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import imageData from './imageData.json';
 
-const SLIDER_SPEED = 5000 // m/s
-const SLIDER_FADE_IN_SPEED = 500
+const SLIDER_DISPLAY = 5000 
+const SLIDER_FADE_IN = 500
 
 class ImageSlider extends Component {  
   constructor(props){
@@ -20,7 +20,7 @@ class ImageSlider extends Component {
     this.startImageSlider = this.startImageSlider.bind(this)
   }
   componentDidMount(){
-    //create image array from import file
+    //create image array from imported file
     var importImages = []
     for(let i = 0; i < imageData.length; i++){
       importImages.push(imageData[i])
@@ -28,22 +28,22 @@ class ImageSlider extends Component {
     this.startImageSlider(importImages)
   }
   startImageSlider(images){
+    //set images and start image slider
     this.setState({ images: images, sliderImage: images[this.state.index]}, 
-    () => setInterval(this.slideImage, SLIDER_SPEED)) 
+    () => setInterval(this.slideImage, SLIDER_DISPLAY)) 
   }
   slideImage(){
      const { images, index } = this.state;
-     
+     //increment to next image 
      var nextIndex = index 
-
-     nextIndex++ //increment to next image 
-
-     if(nextIndex === images.length){ //reset sliderImage when index reaches array length
+     nextIndex++ 
+     //reset image slider when index reaches array length
+     if(nextIndex === images.length){ 
       nextIndex = 0
      }
      //fade out current image and fade in the next image
      this.setState({ opacity: 0 }, 
-      () => setTimeout(() => this.setState({ sliderImage: images[nextIndex], opacity: 1 , index: nextIndex  }), SLIDER_FADE_IN_SPEED ))
+      () => setTimeout(() => this.setState({ sliderImage: images[nextIndex], opacity: 1 , index: nextIndex  }), SLIDER_FADE_IN ))
   }
   //display image slider
   render() { 
@@ -63,7 +63,7 @@ class ImageSlider extends Component {
     );
   }
 }
-//top image slider
+//image slider
 class SliderImage extends Component {
     render(){
       const { sliderImage, opacityStyle } = this.props;
@@ -76,7 +76,7 @@ class SliderImage extends Component {
         );
     }
 }
-//image thumbnails
+//image slider thumbnails
 class SliderThumbs extends Component {
     render() {
       const { images, sliderImageId } = this.props;
