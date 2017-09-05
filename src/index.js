@@ -49,7 +49,7 @@ class ImageSlider extends Component {
   render() { 
     const { images, sliderImage, opacity, index } = this.state
     return (
-      <div className="image-slider-container">
+      <div className="slider-container">
         <h1>Image Slider</h1>
           <SliderImage
             opacityStyle = { opacity }
@@ -68,10 +68,11 @@ class SliderImage extends Component {
     render(){
       const { sliderImage, opacityStyle } = this.props
       return(
-        <div className="image-container" style={{opacity: opacityStyle, transition:"opacity 1s"}}>
+        <div style={{opacity: opacityStyle, transition:"opacity 1s"}}>
           <div className="selected-image-block">
             <img alt={sliderImage.title} src={ process.env.PUBLIC_URL + sliderImage.source} />
           </div>
+          <p>{sliderImage.title}</p>
         </div>
         );
     }

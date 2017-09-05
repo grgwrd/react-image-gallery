@@ -9,21 +9,15 @@ body {
     margin-right: auto;
     width: 490px;
 }
-.image-container{
-	width: 490px;
-	height: 300px;
-	margin: 10px;
-	overflow: hidden;
-	margin-left: auto;
-	margin-right: auto;
+.selected-image-block{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	min-height: 455px;
 }
-.image-container img{
-	width: 490px;
-	height: auto;
-	position: relative;
-	top: -10px;
-	left: -5px;
-
+.selected-image-block img{
+	margin-left:auto;
+	margin-right:auto;
 }
 .image-block {
 	float: left;
