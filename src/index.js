@@ -66,7 +66,7 @@ class ImageSlider extends Component {
 //image slider
 class SliderImage extends Component {
     render(){
-      const { sliderImage, opacityStyle } = this.props;
+      const { sliderImage, opacityStyle } = this.props
       return(
         <div className="image-container" style={{opacity: opacityStyle, transition:"opacity 1s"}}>
           <div className="selected-image-block">
@@ -79,7 +79,7 @@ class SliderImage extends Component {
 //image slider thumbnails
 class SliderThumbs extends Component {
     render() {
-      const { images, sliderImageId } = this.props;
+      const { images, sliderImageId } = this.props
       return(
            <div className="slider-container">
            {
