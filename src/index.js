@@ -45,9 +45,9 @@ class ImageSlider extends Component {
      this.setState({ opacity: 0 }, 
       () => setTimeout(() => this.setState({ sliderImage: images[nextIndex], opacity: 1 , index: nextIndex  }), SLIDER_FADE_IN ))
   }
-  //display image slider
+  //display image slider 
   render() { 
-    const { images, sliderImage, opacity, index } = this.state
+    const { images, sliderImage, opacity } = this.state
     return (
       <div className="slider-container">
         <h1>Image Slider</h1>
@@ -63,7 +63,7 @@ class ImageSlider extends Component {
     );
   }
 }
-//image slider
+//image slider image
 class SliderImage extends Component {
     render(){
       const { sliderImage, opacityStyle } = this.props
