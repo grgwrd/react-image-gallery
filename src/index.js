@@ -20,22 +20,22 @@ class ImageSlider extends Component {
     this.startImageSlider = this.startImageSlider.bind(this)
   }
   componentDidMount(){
-    //create image array from imported file
-    var importImages = []
+    //create array from imported images
+    let importImages = []
     for(let i = 0; i < imageData.length; i++){
       importImages.push(imageData[i])
     }
     this.startImageSlider(importImages)
   }
   startImageSlider(images){
-    //set images and start image slider
+    //set images and start image slider with callback
     this.setState({ images: images, sliderImage: images[this.state.index]}, 
     () => setInterval(this.slideImage, SLIDER_DISPLAY)) 
   }
   slideImage(){
      const { images, index } = this.state;
      //increment to next image 
-     var nextIndex = index 
+     let nextIndex = index 
      nextIndex++ 
      //reset image slider when index reaches array length
      if(nextIndex === images.length){ 
