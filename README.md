@@ -15,7 +15,7 @@ This is the parent class with a constructor method that declares the variables u
 
 <p>startImageSlider is where setState is called for first time and the image source and opacity are set to display the image. When setState is called there is a callback function used to setInterval that will be called for every x amount of seconds to call the function to slide the image, named slideImage.</p>
 <p>
-When slideImage is called the current state is looked at in the constructor method for the index. The index is incremented to the next image on the image array to set the state for the next image on the slider. When setState is called the opacity is set to zero on the current image being displayed to fade out the image and then the callback function on setState uses a setTimeout that triggers after half a second for a function to setState to make opacity 1 and the next image on image array index for the image slider.</p>
+When slideImage is called the current state is looked at in the constructor method for the index. The index is incremented to the next image on the image array to set the state for the next image on the slider. When setState is called the opacity is set to zero on the current image being displayed to fade out the image. Then the callback function on setState calls an anonymous functino to setTimeout for half a second. After half a second setState is called again to set opacity to 1 and fade in the next image on image array index for the image slider.</p>
 
 <h3>SliderImage</h3>
 <p>A child class for ImageSlider that displays the selected image for the image slider. This is where the image source, image title and opacity is set to change the images and styles during the image slider effect.</p>
