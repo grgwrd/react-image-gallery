@@ -1,7 +1,7 @@
 <h1>Simple Image Slider with REACT JS</h1>
 
 <p>
-This application is using React JS components that include one parent class, <strong>ImageSlider</strong>, and two child classes,<strong> SliderImage</strong> and <strong>SliderThumbs</strong>. When the application is running an image for the image slider is displayed along with a list of thumbmail images for each image. Each image is displayed for five seconds with the matching thumbnail image highlighted. After the five seconds the image fades out and replaced with the next image fading in on the list. This process repeats after going through each image on the thumbnail list giving the image slider effect.</p> 
+This application is using React JS components that include one parent class, <strong>ImageSlider</strong>, and two child classes,<strong> SliderImage</strong> and <strong>SliderThumbs</strong>. When the application is running an image for the image slider is displayed along with a list of thumbmail images for each image. Each image is displayed for five seconds with the matching thumbnail image highlighted. After the five seconds the image fades out and replaced with the next image fading in on the list. This process repeats after going through each image on the thumbnail list. Giving the effect for an image slider on the browser window.</p> 
 
 <h2>How it all works</h2>
 <p>
