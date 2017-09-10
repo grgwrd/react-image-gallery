@@ -18,7 +18,7 @@ This is the parent class with a constructor method that declares the variables u
 When slideImage is called the current state is looked at in the constructor method for the index. The index is incremented to the next image on the image array to set the state for the next image on the slider. When setState is called the opacity is set to 0 on the current image being displayed to fade out the image. Then the callback function on setState calls an anonymous function to setTimeout for half a second. After half a second setState is called again to set opacity to 1 and fade in the next image on image array index for the image slider.</p>
 
 <h3>SliderImage</h3>
-<p>A child class for ImageSlider that displays the selected image for the image slider. This is where the image source, image title and opacity is set to change the images and styles during the image slider effect.</p>
+<p>A child class that displays the selected image for the image slider. This is where the image source, image title and opacity is set to change the images and styles during the image slider effect.</p>
 
 <h3>SliderThumbs</h3>
 <p>A child class that displays the image thumbs for the image slider. It takes the array of images and uses a map function to diplay the content to the screen. The class name is changed on the div element based on the image id matching with the selected image on the SliderImage. The class changes to highlight which image is being displayed on the slider image array.</p> 
